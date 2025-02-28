@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards of Heart</title>
+    <link rel="stylesheet" href="../../css/projects.css">
+   
+
+</head>
+<body>
+
+   <!-- Back to Main Page Button -->
+   <div class="navigation-buttons">
+    <a href="../../index.html" class="main-page-button">← Take me BACK</a>
+    <a href="../projects/oo.html" class="prev-project-button">←Previous Project</a>
+    <a href="../projects/egre.html" class="next-project-button">Next Project →</a>
+</div>
+
+    <!-- Hero Section -->
+    <section class="hero coh-hero">
+        <div class="container">
+            <h1>Cards of Heart</h1>
+            <h2>Directed by Marielle Brady</h2>
+        </div>
+
+    </section>
+    
+    <!-- JavaScript for Dynamic Background -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const heroSection = document.querySelector('.hero');  // Target the hero section
+
+            // Define project-specific background images
+            const backgrounds = {
+                'cards-of-heart-hero': '../../css/coh1.jpg',
+                // Add more projects as needed
+            };
+
+            // Get the ID of the hero section (you can use this to identify the project)
+            const heroId = heroSection.id;  // This retrieves the ID of the section (e.g., 'cards-of-heart-hero')
+
+            // Set the background image based on the ID of the section
+            if (backgrounds[heroId]) {
+                heroSection.style.backgroundImage = `url(${backgrounds[heroId]})`;
+            } else {
+                // Fallback background if no matching project is found
+                heroSection.style.backgroundImage = 'url("../../css/coh1.jpg")';
+            }
+        });
+    </script>
+    <!-- JavaScript for Fade-Out Effect---------------->
+
+
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <h2>My Role in Cards of Heart</h2>
+            <p>
+                I was incharge of creating all the invorment asset, including the overworld map, important locations, conceptualizing the structures, and other interiors of important buildings. I was also in charge of illustrating the card-battle background when Amalia(the player) encounters a fight with the Shadows.
+            </p>
+                <div class="battle">
+                    <img src="../../assets/forest.png" alt="Battle Background 1">
+                    <img src="../../assets/hilltop.png" alt="Battle Background 2">
+                    <img src="image/coh3.jpg" alt="Battle Background 3">
+                </div>
+        </div>
+    </section>
+
+    <!-- Brainstorming and Challenges -->
+    <section class="brainstorming">
+        <div class="container">
+            <h2>From Concept to Creation</h2>
+            <p>
+                I started thinking about a proper workflow, since I have not worked with an entire top-down 2D overworld map, which I imagine it will consists of around 20,000x20,000 pixels for the whole canvas. I brainstormed the layout with the game’s mechanics in mind: proportions, camera distance, and character scale were all pivotal. Yet, the biggest challenge lay in the details—how to make every scene cohesive yet distinct? I was thinking of creating a ground asset, 3 variations of trees and bushes, and smaller details such aa fences nd flowers, yet it was clear that the world did not feel as organic.
+            </p>
+            <p>
+                I actually reffered to this video a lot when structuring a workflow. I will share the link to the video since I learned alot from it and I believe good things needs to be shared.
+            </p>
+            <div class="carousel">
+                <img src="../../assets/lib_int_concept.png" alt="Concept Art 1">
+                <img src="../../assets/full map.png" alt="Concept Art 3">
+                <img src="../../assets/amalias_house.png" alt="Concept Art 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2>Building a World, Asset by Asset</h2>
+            <p>
+                To create a world that feels alive, I broke it into pieces—designing individual locations at 1080x1920 resolutions before stitching them together. This was an excercise I learned from the previous video.
+            </p>
+            <p>
+                After composing all the main locations, I then measeured the relative distance and constuct paths based on that. I also created more assets, whith ones that stand out more and ones that are more faded in the background. In total I have created around 200+ of individual assets.
+            </p>
+            <div class="asset-gallery">
+                <img src="../../assets/props.png" alt="Tree Asset">
+                <img src="../../assets/tree_props.png" alt="Landmark Asset">
+                <img src="../../assets/path_prop.png" alt="Environment Asset">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection Section -->
+    <section class="reflection">
+        <div class="container">
+            <h2>Lessons Learned</h2>
+            <p>
+                I learned a skill of balancing creating organic art and technical constraints. And Also an excersie of imagining blank spaces. It is like looking at a picture and up-scaling it in real time using imagination. From making sure assets actually fit where they’re supposed to (because scale definetly matters) to keeping the art style consistent across a massive world, I learned that every tiny detail can make or break the big picture. 
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cindy Gao Liang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

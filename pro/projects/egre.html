@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Egregore project showcases a 3D animation exploring surrealism and abstract forms. Directed by Michael Wahba.">
+    <meta name="keywords" content="3D animation, rigging, shading, surrealism, project">
+    <title>Egregore Project</title>
+    <link rel="stylesheet" href="../../css/projects.css">
+</head>
+<body>
+    <!-- Back to Main Page Button -->
+    <div class="navigation-buttons">
+        <a href="../../index.html" class="main-page-button">← Take me BACK</a>
+        <a href="../projects/coh.html" class="prev-project-button">← Previous Project</a>
+        <a href="../projects/e4e.html" class="next-project-button">Next Project →</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero egre-hero">
+        <div class="container">
+            <h1>Egregore</h1>
+            <h2>Directed by Michael Wahba</h2>
+        </div>
+    </section>
+
+    <script>
+        // Ensure DOM content is loaded before running the script
+        window.addEventListener('DOMContentLoaded', () => {
+            // Select the hero section
+            const heroSection = document.querySelector('.hero');
+    
+            // Ensure heroSection exists to avoid runtime errors
+            if (!heroSection) {
+                console.warn('Hero section not found. Skipping background assignment.');
+                return;
+            }
+    
+            // Define project-specific background images
+            const backgrounds = {
+                'egre-hero': '../../pro/projects/image/egr3.jpg',
+                // Add more projects with their respective hero section IDs
+            };
+    
+            // Retrieve the ID of the hero section
+            const heroId = heroSection.id;
+    
+            // Set the background image based on the ID or use a fallback
+            const backgroundImage = backgrounds[heroId] || '../../pro/projects/image/egr3.jpg';
+            heroSection.style.backgroundImage = `url('${backgroundImage}')`;
+        });
+    </script>
+
+    <main>
+        <!-- Project Overview Section -->
+        <article class="project-overview">
+            <div class="container">
+                <h2>Egregore</h2>
+                <p>A captivating 3D animation project where surrealism meets storytelling. The project explores abstract forms and the relationship between the ethereal and the physical.</p>
+            </div>
+        </article>
+
+        <!-- My Role Section -->
+        <article class="my-role">
+            <div class="container">
+                <h2>My Contributions</h2>
+                <p>I took charge of the 3D modeling, texturing, and shading workflows, including rigging the main character and creating dynamic environments. I also implemented technical solutions to streamline the animation pipeline.</p>
+                <div class="image-gallery">
+                    <img src="../../pro/projects/image/egr2.jpg" alt="3D rigging process for character animation">
+                    <img src="../../pro/projects/image/egr1.jpg" alt="Shading process for the main character">
+                </div>
+            </div>
+        </article>
+
+        <!-- Lessons Learned Section -->
+        <article class="lessons-learned">
+            <div class="container">
+                <h2>Lessons Learned</h2>
+                <p>This project taught me the importance of iterative workflows and the balance between technical precision and artistic creativity. Developing modular assets for flexibility across multiple scenes proved invaluable.</p>
+                <div class="image-gallery">
+                    <img src="../../assets/lessons_assets.png" alt="Modular Asset Creation for flexible scene integration">
+                    <img src="../../assets/lessons_scaling.png" alt="Scaling insights for assets in large scenes">
+                </div>
+            </div>
+        </article>
+
+        <!-- Pipeline Section -->
+        <article class="pipeline">
+            <div class="container">
+                <h2>Pipeline Overview</h2>
+                <p>The workflow involved a robust pipeline that integrated modeling, rigging, texturing, and rendering. The diagram below outlines the key stages.</p>
+                <div class="image-gallery">
+                    <img src="../../assets/pipeline_diagram.png" alt="Pipeline diagram showing stages from modeling to rendering">
+                </div>
+            </div>
+        </article>
+
+        <!-- 3D Model Workflow Section -->
+        <article class="model-workflow">
+            <div class="container">
+                <h2>3D Model Workflow</h2>
+                <p>Each 3D model was developed following a meticulous process of sketching, creating a model sheet, and finalizing in 3D.</p>
+                <div class="image-gallery">
+                    <img src="../../assets/model_sheet_1.png" alt="Character model sheet with front and side views">
+                    <img src="../../assets/model_sheet_2.png" alt="Character model sheet with detailed anatomy">
+                    <img src="../../assets/model_sheet_3.png" alt="Character model sheet with texture mapping">
+                </div>
+            </div>
+        </article>
+    </main>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cindy Gao Liang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

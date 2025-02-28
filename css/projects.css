@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #121212;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* General Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #210202;
+    z-index: 1;
+}
+
+
+/* Container inside Hero Section */
+.hero .container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Specific Background for Cards of Heart Project */
+.coh-hero {
+    background: url('coh1.jpg') no-repeat center center/cover;
+}
+
+.egre-hero {
+    background: url('../pro/projects/image/egr2.jpg') no-repeat center center/cover;
+}
+
+.ceph-hero {
+    background: url('../pro/projects/image/ceph2.png') no-repeat center center/cover;
+}
+/*-------------------------------------------------*/
+
+
+
+
+/* Text Styles */
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    z-index: 2; /* Ensure text stays above the background */
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: #210202;
+    line-height: 1.8;  
+    text-align: center;
+}
+
+
+/* Text Styles for specific projects */
+.egre-hero h1 {
+    color: #fffefa; /* Example: red color for the main title */
+}
+
+.egre-hero h2 {
+    color: #fff8fb; /* Example: light yellow color for the subtitle */
+}
+
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+/* Fade Effect */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1.0s ease;
+}
+
+
+/* Introduction Section */
+.introduction {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+
+/* === Grid Layout for Images === */
+.battle, .carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible 3-column grid */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+/* === Image Styling === */
+.battle img, .carousel img {
+    width: 100%; /* Full width within container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 250px; /* Limit height for large images */
+    object-fit: cover; /* Crop to fit container */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+/* === Row Layout for Asset Gallery === */
+.asset-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to enforce row layout */
+    gap: 20px; /* Add spacing between items */
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+    padding: 10px 0; /* Add padding for better spacing */
+    scrollbar-width: thin; /* Slim scrollbar (for modern browsers) */
+}
+
+.asset-gallery img {
+    height: 150px; /* Set uniform height */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    object-fit: contain; /* Ensure the full image is visible without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+/* === Text Centering === */
+p, h2 {
+    text-align: justify;
+}
+
+/* Section Styling */
+section {
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+}
+
+section h2 {
+    color: #e63946;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p, section ul {
+    font-size: 1rem;
+    color: #fdf9f9;
+    line-height: 1.8;
+}
+
+ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* === Back to Main Page Button === */
+/* === Navigation Buttons === */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-buttons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation-buttons a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Styling for individual buttons */
+.main-page-button {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.prev-project-button,
+.next-project-button {
+    flex-grow: 0;
+}
+
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navigation-buttons a {
+        width: 100%; /* Buttons fill width on smaller screens */
+        text-align: center;
+    }
+}
