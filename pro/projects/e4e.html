@@ -3,28 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../../css/projects.css">
+    <title>Eye4Eye</title>
+    <link rel="stylesheet" href="../../css/unique/e4e.css">
+    <link re;="stylesheet" href="../../styles.css">
+
 </head>
 <body>
-    <!-- Header (optional, reuse from main site) -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo"><a href="../../index.html">[Your Portfolio]</a></h1>
-        </div>
-    </header>
 
-    <!-- Project Details -->
-    <section class="project-details">
-        <div class="container">
-            <h2>Eye4Eye</h2>
-            <img src="image/e4e2.jpg" alt="Project 1">
-            <p>
-                A detailed description of Project 1. Include challenges you faced, solutions, tools you used, and how it impacted the final product.
-            </p>
-            <a href="../../index.html" class="btn">Back to Portfolio</a>
+   <!-- Back to Main Page Button -->
+   <div class="navigation-buttons">
+    <a href="../../index.html" class="main-page-button">← Take me BACK</a>
+    <a href="../projects/egre.html" class="prev-project-button">←Previous Project</a>
+    <a href="../projects/ceph.html" class="next-project-button">Next Project →</a>
+</div>
+
+
+    <!-- Splash Screen -->
+    <section class="splash">
+        <div class="splash-content">
+            <h1>Eye4Eye</h1>
+            <p>Directed by Yi Dan</p>
         </div>
     </section>
+
+    <!-- Fade-Out Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const splash = document.querySelector('.splash');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const fadeOutPoint = 600;
+            splash.style.opacity = scrollTop < fadeOutPoint ? 1 - scrollTop / fadeOutPoint : 0;
+        });
+    </script>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>Egregore is a first-person adventure set in a mysterious café in Cairo. Players adopt a new perspective and shape reality to unravel an occult conspiracy hidden in plain sight. The gameplay involves point-and-click mechanics, gathering clues, solving puzzles, and connecting graph nodes.</p>
+            <div class="intro">
+                <img src="../../pro/projects/image/e4e2.jpg" alt="Egregore Introduction Image">
+                <img src="../../pro/projects/image/e4e3.jpg" alt="Egregore Introduction Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributions Section -->
+    <section class="contributions">
+        <div class="container">
+            <h2>My Contributions</h2>
+
+            <!-- Character Modeling -->
+            <div class="contribution-section">
+                <h3>Character Modeling</h3>
+                <p>I was responsible for creating low-poly character models that emphasized silhouettes for style and performance efficiency.</p>
+                <div class="intro">
+                    <img src="../../assets/eye 4 eye/battery.png" alt="Character Model 1">
+                    <img src="../../assets/eye 4 eye/vinegar_oil.png" alt="Character Model 2">
+                    <img src="../../assets/eye 4 eye/olive oil.png" alt="Character Model 3">
+                    <img src="../../assets/eye 4 eye/vinegar.png" alt="Character Model 4">
+                </div>
+            </div>
+
+            <!-- Rigging -->
+            <div class="contribution-section">
+                <h3>Rigging</h3>
+                <p>I implemented a functional rigging system to ensure smooth character animation, focusing on efficiency and ease of use.</p>
+                <p>
+                    The character assets followed a structured pipeline, from modeling and texturing in Maya to optimization and integration in Unreal Engine.
+                </p>
+                <div class="carousel">
+                    <img src="../../assets/eye 4 eye/drawer.png" alt="Rigging Example 1">
+                    <img src="../../assets/eye 4 eye/image.png" alt="Rigging Example 2">
+                </div>
+            </div>
+    </section>
+
+    <!-- Lessons Learned Section -->
+    <section class="lessons">
+        <div class="container">
+            <h2>Lessons Learned</h2>
+            <p>Working on Egregore challenged me to balance artistic expression with technical efficiency. I learned how to optimize assets for real-time rendering while maintaining visual fidelity, ensuring a smooth transition from concept to in-game implementation.</p>
+            <div class="image-row">
+                <img src="../../assets/egregore/fun.png" alt="Lessons Learned Image">
+        </div>
+    </section>
+
+ <!--
+     Navigation Buttons 
+    <div class="navigation">
+        <a href="../previous-project.html" class="btn">Previous Project</a>
+        <a href="../../index.html" class="btn">Back to Main Page</a>
+        <a href="../next-project.html" class="btn">Next Project</a>
+    </div> 
+-->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cindy Gao Liang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
