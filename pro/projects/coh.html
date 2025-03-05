@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards of Heart</title>
-    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/unique/coh.css">
    
 
 </head>
@@ -16,40 +16,24 @@
     <a href="../projects/oo.html" class="prev-project-button">←Previous Project</a>
     <a href="../projects/egre.html" class="next-project-button">Next Project →</a>
 </div>
-
-    <!-- Hero Section -->
-    <section class="hero coh-hero">
-        <div class="container">
+    </section>
+     <!-- Splash Screen -->
+     <section class="splash">
+        <div class="splash-content">
             <h1>Cards of Heart</h1>
             <h2>Directed by Marielle Brady</h2>
         </div>
-
     </section>
-    
-    <!-- JavaScript for Dynamic Background -->
+
+    <!-- Fade-Out Effect -->
     <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const heroSection = document.querySelector('.hero');  // Target the hero section
-
-            // Define project-specific background images
-            const backgrounds = {
-                'cards-of-heart-hero': '../../css/coh1.jpg',
-                // Add more projects as needed
-            };
-
-            // Get the ID of the hero section (you can use this to identify the project)
-            const heroId = heroSection.id;  // This retrieves the ID of the section (e.g., 'cards-of-heart-hero')
-
-            // Set the background image based on the ID of the section
-            if (backgrounds[heroId]) {
-                heroSection.style.backgroundImage = `url(${backgrounds[heroId]})`;
-            } else {
-                // Fallback background if no matching project is found
-                heroSection.style.backgroundImage = 'url("../../css/coh1.jpg")';
-            }
+        window.addEventListener('scroll', function () {
+            const splash = document.querySelector('.splash');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const fadeOutPoint = 600;
+            splash.style.opacity = scrollTop < fadeOutPoint ? 1 - scrollTop / fadeOutPoint : 0;
         });
     </script>
-    <!-- JavaScript for Fade-Out Effect---------------->
 
 
 

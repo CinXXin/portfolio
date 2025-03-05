@@ -3,122 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cephalopod Sidestep - Project Details</title>
-    <link rel="stylesheet" href="../../css/projects.css">
+    <title>Cephalopod Sidestep</title>
+    <link rel="stylesheet" href="../../css/unique/ceph.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo"><a href="../../index.html">Cindy Gao Liang</a></h1>
-        </div>
-    </header>
+<!-- Back to Main Page Button -->
+<div class="navigation-buttons">
+    <a href="../../index.html" class="main-page-button">← Take me BACK</a>
+    <a href="../projects/e4e.html" class="prev-project-button">←Previous Project</a>
+    <a href="../projects/doru.html" class="next-project-button">Next Project →</a>
+</div>
 
-    <!-- Hero Section -->
-    <section class="egre-hero">
-        <div class="container">
-            <h1>Cephalopod Sidestep</h1>
+    <!-- Splash Screen -->
+    <section class="splash">
+        <div class="splash-content">
+            <p></p>
         </div>
     </section>
 
-     <!-- JavaScript for Dynamic Background -->
-     <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const heroSection = document.querySelector('.hero');  // Target the hero section
-
-            // Define project-specific background images
-            const backgrounds = {
-                'egre-hero': '../projects/image/egre2.jpg',
-                // Add more projects as needed
-            };
-
-            // Get the ID of the hero section (you can use this to identify the project)
-            const heroId = heroSection.id;  // This retrieves the ID of the section (e.g., 'cards-of-heart-hero')
-
-            // Set the background image based on the ID of the section
-            if (backgrounds[heroId]) {
-                heroSection.style.backgroundImage = `url(${backgrounds[heroId]})`;
-            } else {
-                // Fallback background if no matching project is found
-                heroSection.style.backgroundImage = 'url(../projects/image/egre2.jpg")';
-            }
+    <!-- Fade-Out Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const splash = document.querySelector('.splash');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const fadeOutPoint = 600;
+            splash.style.opacity = scrollTop < fadeOutPoint ? 1 - scrollTop / fadeOutPoint : 0;
         });
     </script>
-
-    <!-- Project Overview -->
-    <section class="project-overview">
+    <!-- Introduction -->
+    <section class="introduction">
         <div class="container">
-            <h2>Cephalopod Sidestep</h2>
-            <p>
-                Cephalopod Sidestep was a semester-long project developed by a team of 2. 
-                I was responsible for all the art assets, including conceptual designs, character sprites, and environment art.
-            </p>
-            <p>
-                The project involved creating a streamlined pipeline using Unity and P4V as version control to ensure smooth collaboration. 
-                We utilized a burndown chart to lay out each sprint, track the game's progress, and maintain a steady pace.
-            </p>
+            <h2>Introduction</h2>
+            <p>A family of octopuses is kidnapped and taken to a horrifying restaurant where there's only one thing on the menu: octopus hot dogs. Somehow, one special octopus gets the chance to escape this creepy hellscape and avenge his fallen brethren along the way.</p>
         </div>
     </section>
-
-    <!-- Pipeline Section -->
-    <section class="project-details">
-        <div class="container">
-            <h2>Pipeline & Process</h2>
-            <p>
-                Our workflow was centered around Unity as the game engine and P4V (Perforce) for version control. 
-                This setup enabled efficient file management and collaboration between team members.
-            </p>
-            <p>
-                The pipeline involved defining clear responsibilities, with me focusing on creating and implementing all art assets. 
-                A structured approach, including the use of burndown charts, helped us plan each sprint and track our progress effectively.
-            </p>
+    
+    <!-- Brainstorming & Idea -->
+    <section class="brainstorming">
+        <div class="container split-layout">
+            <div class="text-content">
+                <h2>Brainstorming the Idea</h2>
+                <p>We wanted to create a unique platformer experience. Unlike traditional platformers where the ground is safe, here, the only secure spots are the walls and ceilings. The movement was designed to feel fluid, giving players the sensation of truly being an octopus navigating an unusual environment.</p>
+            </div>
+            <div class="image-content">
+                <img src="../../assets/octopus/octo_concept.png" alt="Brainstorm Sketch 1">
+            </div>
         </div>
     </section>
-
-    <!-- Process Section -->
-    <section class="process">
-        <div class="container">
-            <h2>Process</h2>
-            <p>
-                The development process included the following key steps:
-            </p>
-            <ul>
-                <li>Initial brainstorming and conceptualization of the game's theme and mechanics.</li>
-                <li>Sketching and finalizing conceptual art for the characters and environments.</li>
-                <li>Creating production-ready assets and integrating them into Unity.</li>
-                <li>Maintaining version control with P4V for all project files.</li>
-                <li>Tracking progress with burndown charts and adjusting goals based on sprint reviews.</li>
-            </ul>
+    
+    <!-- Concepting & Level concepting-->
+    <section class="brainstorming">
+        <div class="container split-layout">
+            <div class="image-content">
+                <img src="../../assets/octopus/rough_concept.png" alt="Brainstorm Sketch 2">
+                <img src="../../assets/octopus/level_concept.png" alt="Brainstorm Sketch 3">
+            </div>
+            <div class="text-content">
+                <h2>Level design and concepting</h2>
+                <p>We wanted to create a unique platformer experience. Unlike traditional platformers where the ground is safe, here, the only secure spots are the walls and ceilings. The movement was designed to feel fluid, giving players the sensation of truly being an octopus navigating an unusual environment.</p>
+            </div>
         </div>
     </section>
-
-    <!-- Art Assets Section -->
-    <section class="art-assets">
+    
+    
+    <!-- Sprite Creation -->
+    <section class="sprite-creation">
         <div class="container">
-            <h2>Art Assets</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <img src="../pro/projects/image/ceph1.png" alt="Environment Concept Art">
-                    <p>Environment Concept Art</p>
+            <h2>Creating the Sprites</h2>
+            
+            <div class="sprite-section">
+                <h3>Background</h3>
+                <div class="image-grid">
+                    <img src="../../assets/bg1.png" alt="Background 1">
+                    <img src="../../assets/bg2.png" alt="Background 2">
                 </div>
-                <div class="grid-item">
-                    <img src="../pro/projects/image/ceph2.png" alt="Character PNG">
-                    <p>Main Character Sprite</p>
+            </div>
+            
+            <div class="sprite-section">
+                <h3>Foreground</h3>
+                <div class="image-grid">
+                    <img src="../../assets/fg1.png" alt="Foreground 1">
+                    <img src="../../assets/fg2.png" alt="Foreground 2">
                 </div>
-                <div class="grid-item">
-                    <img src="../pro/projects/image/ceph3.png" alt="Additional Art Asset">
-                    <p>Additional Art Asset</p>
+            </div>
+            
+            <div class="sprite-section">
+                <h3>Characters</h3>
+                <div class="image-grid">
+                    <img src="../../assets/octopus/dumbu_inked_ver1.png" alt="Character 1">
+                    <img src="../../assets/octopus/dumbu_jumo_inked_ver1.png" alt="Character 2">
+                    <img src="../../assets/octopus/image.png" alt="Character 3"> 
+                </div>
+            </div>
+            
+            <div class="sprite-section">
+                <h3>Illustrations</h3>
+                <div class="image-grid">
+                    <img src="../../assets/illustration1.png" alt="Illustration 1">
+                    <img src="../../assets/illustration2.png" alt="Illustration 2">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Cindy Gao Liang. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Cindy Gao Liang. All rights reserved.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    
 </body>
 </html>

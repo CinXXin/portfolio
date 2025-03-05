@@ -91,27 +91,26 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Image Panels */
-.intro, .image-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+/* Updated Image Grid Layout for Egregore Page */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.intro img, .image-row img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+.image-grid img {
+    width: 100%; /* Ensures images shrink proportionally */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 400px; /* Prevents images from getting too large */
+    object-fit: contain;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
-    .intro, .image-row {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
 
 
 /* Navigation Buttons */

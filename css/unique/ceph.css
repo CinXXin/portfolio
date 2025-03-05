@@ -1,0 +1,231 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFC0CB; /* Pastel Pink Background */
+    color: #4D4D4D;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #FF69B4; /* Bright Pink for Headings */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Splash Screen with Fade-Out Effect */
+/* Splash Section */
+.splash {
+    position: relative;
+    height: 100vh;
+    background: url('../../assets/octopus/c4cf23.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.splash-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.splash-content h2 {
+    font-size: 1.5rem;
+    color: #bbb;
+}
+
+/* Introduction Section */
+.introduction {
+    background: #FFF5F7; /* Soft Pink Background */
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.introduction img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Brainstorming Section - Split Layout */
+/* Fixing Split Layout */
+.split-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Ensuring Text Content Takes Space */
+.text-content {
+    flex: 1;
+    min-width: 40%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* Ensuring Images Stay in a Grid and Scale Properly */
+.image-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Fixing Fade-Out Effect */
+.splash {
+    position: relative;
+    height: 100vh;
+    background: url('../../assets/octopus/c4cf23.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+    z-index: 2;
+}
+
+.splash-content {
+    position: relative;
+    z-index: 3; /* Ensuring text does not fade */
+}
+
+/* Smooth Scrolling Fix */
+html, body {
+    scroll-behavior: smooth;
+}
+
+
+/* Sprite Sections */
+.sprite-section {
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.sprite-section h3 {
+    color: #FF69B4;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 50px 0;
+}
+
+.nav-button {
+    text-decoration: none;
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #777;
+}
+
+/* === Back to Main Page Button === */
+/* === Navigation Buttons === */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-buttons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation-buttons a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Styling for individual buttons */
+.main-page-button {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.prev-project-button,
+.next-project-button {
+    flex-grow: 0;
+}
+
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navigation-buttons a {
+        width: 100%; /* Buttons fill width on smaller screens */
+        text-align: center;
+    }
+}
+/* Text Styles */
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    z-index: 2; /* Ensure text stays above the background */
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: #210202;
+    line-height: 1.8;  
+    text-align: center;
+}
