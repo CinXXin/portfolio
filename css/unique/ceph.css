@@ -93,6 +93,30 @@ h1, h2, h3 {
     border-radius: 10px;
 }
 
+/* Ensuring Text Content Takes Space */
+.lev-text-content {
+    flex: 1;
+    min-width: 30%;
+    max-width: 40%;
+    padding: 20px;
+}
+
+/* Ensuring Images Stay in a Grid and Scale Properly */
+.lev-image-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px;
+    justify-content: center;
+}
+
+.lev-image-content img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* Fixing Fade-Out Effect */
 .splash {
     position: relative;

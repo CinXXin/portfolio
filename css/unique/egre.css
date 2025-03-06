@@ -82,7 +82,7 @@ section {
 
 .intro img, .image-row img {
     width: 100%;
-    max-width: 400px;
+    max-width: 590px;
     height: auto;
     border-radius: 10px;
 }
@@ -92,6 +92,59 @@ section {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* === Grid Layout for Images === */
+.battle, .carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible 3-column grid */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+/* === Image Styling === */
+.battle img, .carousel img {
+    width: 100%; /* Full width within container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 250px; /* Limit height for large images */
+    object-fit: cover; /* Crop to fit container */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+/* Brainstorming Section - Split Layout */
+/* Fixing Split Layout */
+.split-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Ensuring Text Content Takes Space */
+.text-content {
+    flex: 1;
+    min-width: 40%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* Ensuring Images Stay in a Grid and Scale Properly */
+.image-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
 }
 
 
