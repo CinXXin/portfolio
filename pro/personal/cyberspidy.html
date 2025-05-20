@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egregore</title>
+    <link rel="stylesheet" href="../../css/unique/cutecar.css">
+    <link re;="stylesheet" href="../../styles.css">
+
+</head>
+<body>
+
+   <!-- Back to Main Page Button -->
+   <div class="navigation-buttons">
+    <a href="../../index.html" class="main-page-button">← Take me BACK</a>
+    <a href="../projects/coh.html" class="prev-project-button">←Previous Project</a>
+    <a href="../projects/e4e.html" class="next-project-button">Next Project →</a>
+</div>
+
+
+    <!-- Splash Screen -->
+    <section class="splash">
+        <div class="splash-content">
+            <h1>Egregore</h1>
+            <p>A first-person adventure into a mysterious café in Cairo.</p>
+        </div>
+    </section>
+
+    <!-- Fade-Out Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const splash = document.querySelector('.splash');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const fadeOutPoint = 600;
+            splash.style.opacity = scrollTop < fadeOutPoint ? 1 - scrollTop / fadeOutPoint : 0;
+        });
+    </script>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>Egregore is a first-person adventure set in a mysterious café in Cairo. Players adopt a new perspective and shape reality to unravel an occult conspiracy hidden in plain sight. The gameplay involves point-and-click mechanics, gathering clues, solving puzzles, and connecting graph nodes.</p>
+            <div class="intro">
+                <img src="../../pro/projects/image/egr2.jpg" alt="Egregore Introduction Image">
+                <img src="../../assets/egregore/front_bar.png" alt="Egregore Introduction Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributions Section -->
+    <section class="contributions">
+        <div class="container">
+            <h2>My Contributions</h2>
+
+            <!-- Character Modeling -->
+            <div class="contribution-section">
+                <h3>Character Modeling</h3>
+                <p>I was responsible for creating low-poly character models that emphasized silhouettes for style and performance efficiency.</p>
+                <div class="carousel">
+                    <img src="../../assets/egregore/salim.png" alt="Character Model 1">
+                    <img src="../../assets/egregore/salim_back.png" alt="Character Model 2">
+                    <img src="../../assets/egregore/patron1_rigged.png" alt="Character Model 3">
+                </div>
+            </div>
+    </section>
+
+     <!-- Brainstorming & Idea -->
+     <section class="brainstorming">
+        <div class="container split-layout">
+            <div class="text-content">
+                <h2>Pipeline and Workflow</h2>
+                <p>This was a project with a large team, so I wanted to create a cohesive rigging pipeline. The rig and models are made using Maya, then implemented into Unreal Engine.</p>
+                <p>Unreal Engine is really powerful so we decided to simply rig the characters and then apply the animations in the engine.</p>
+            </div>
+            <div class="image-content">
+                <img src="../../assets/egregore/rigging workflow.png" alt="Brainstorm Sketch 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned Section -->
+    <section class="lessons">
+        <div class="container">
+            <h2>Lessons Learned</h2>
+            <p>Working on Egregore challenged me to balance artistic expression with technical efficiency. I learned how to optimize assets for real-time rendering while maintaining visual fidelity, ensuring a smooth transition from concept to in-game implementation.</p>
+            <div class="image-row">
+                <img src="../../assets/egregore/fun.png" alt="Lessons Learned Image">
+        </div>
+    </section>
+
+ <!--
+     Navigation Buttons 
+    <div class="navigation">
+        <a href="../previous-project.html" class="btn">Previous Project</a>
+        <a href="../../index.html" class="btn">Back to Main Page</a>
+        <a href="../next-project.html" class="btn">Next Project</a>
+    </div> 
+-->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cindy Gao Liang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

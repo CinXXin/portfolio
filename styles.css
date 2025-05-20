@@ -554,3 +554,95 @@ body {
     line-height: 1.6;
     color: #ddd;
 }
+
+
+
+/* personal Section */
+/* === Personal Projects Section === */
+.personal-projects {
+    background-color: #1a1a1a; /* Same as portfolio for consistency */
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.personal-projects h2 {
+    font-size: 2.5rem;
+    color: #e63946;
+    margin-bottom: 2rem;
+}
+
+/* Project Grid Layout */
+.personal-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+/* Project Card Styling */
+.personal-project-card {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.personal-project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.personal-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Information */
+.personal-project-info {
+    padding: 1rem;
+    text-align: left;
+}
+
+.personal-project-info h3 {
+    font-size: 1.5rem;
+    color: #e63946;
+    margin-bottom: 0.5rem;
+}
+
+.personal-project-info p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+/* Additional Details */
+.personal-project-info .tools {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.personal-project-info .tools strong {
+    color: #fff;
+}
+
+/* Download or View More Button */
+.personal-download-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e63946;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.personal-download-button:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-3px);
+}
+
